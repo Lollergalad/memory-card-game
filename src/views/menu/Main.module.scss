@@ -1,0 +1,56 @@
+@mixin flexCentered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main {
+  @include flexCentered;
+  flex-direction: column;
+
+  .titleContainer {
+    margin: 0 1rem 3rem;
+    font-size: 4rem;
+  }
+
+  .menuContainer {
+    div {
+      margin: 2rem;
+      padding: 1.5rem 2.5rem;
+      border: 0.25rem solid aquamarine;
+      border-radius: 5000rem;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 600;
+      cursor: pointer;
+
+      // background-image: linear-gradient(to right, aquamarine, aquamarine 50%, #242424 50%);
+      // background-size: 200% 100%;
+      // background-position: -100%;
+      // position: relative;
+      transition: all 0.15s ease-in-out;
+
+      &:hover {
+        //background-position: 0;
+        background-color: aquamarine;
+        color: #242424;
+      }
+
+      // &:before {
+      //   content: "";
+      //   background: aquamarine;
+      //   display: block;
+      //   position: absolute;
+      //   bottom: -3px;
+      //   left: 0;
+      //   width: 0;
+      //   height: 3px;
+      //   transition: all 0.3s ease-in-out;
+      // }
+
+      // div:hover::before {
+      //   width: 100%;
+      // }
+    }
+  }
+}
